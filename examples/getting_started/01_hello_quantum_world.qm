@@ -1,0 +1,53 @@
+// QuantumMind "Hello World" Example
+// Demonstrates basic quantum and neural operations
+
+import quantummind as qm
+
+// Create a simple quantum system
+conscious main() {
+    print("🌟 Welcome to QuantumMind!")
+    print("⚛️🧠 Quantum-AI Hybrid Programming")
+    
+    // Create a quantum bit in superposition
+    qubit hello_qubit = |0⟩ + |1⟩ / √2
+    print(f"Created qubit in superposition: {hello_qubit}")
+    
+    // Create a simple neural network
+    neural_net greeting_model = transformer(
+        layers: 2,
+        hidden_size: 64,
+        vocab_size: 1000
+    )
+    print(f"Created neural network: {greeting_model}")
+    
+    // Parallel quantum-classical computation
+    @resource(adaptive: true)
+    result = parallel_think {
+        quantum_branch: () -> {
+            // Apply Hadamard gate and measure
+            hadamard(hello_qubit)
+            measurement = observe(hello_qubit)
+            return f"Quantum result: {measurement}"
+        },
+        
+        neural_branch: () -> {
+            // Process greeting through neural network
+            greeting = "Hello, Quantum World!"
+            embedding = encode_text(greeting)
+            output = greeting_model.forward(embedding)
+            return f"Neural result: {output}"
+        }
+    }
+    
+    // Collapse the superposition and get result
+    final_result = observe(result)
+    print(f"🎉 Final result: {final_result}")
+    
+    // Demonstrate uncertainty handling
+    maybe<string> uncertain_greeting = maybe("Hello!", confidence: 0.9)
+    if probably(uncertain_greeting.confidence > 0.8) {
+        print(f"High confidence greeting: {uncertain_greeting.value}")
+    }
+    
+    print("✨ QuantumMind example completed successfully!")
+}

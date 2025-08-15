@@ -1,0 +1,116 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# Documentation builds
+docs/_build/
+docs/site/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files
+data/
+*.csv
+*.json
+*.pkl
+*.h5
+*.hdf5
+
+# Model files
+models/
+*.pth
+*.pt
+*.ckpt
+*.pb
+*.onnx
+
+# Quantum circuit files
+*.qasm
+*.qc
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Configuration overrides
+config/local/
+config/*.local.*
+
+# Deployment artifacts
+docker-compose.override.yml
+.secrets/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+.mypy_cache/
+.ruff_cache/
+
+# Package manager files
+node_modules/
+package-lock.json
+yarn.lock
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes secrets
+secrets.yaml
+*-secret.yaml
+
+# Performance profiles
+*.prof
+*.profile
+
+# Generated files
+*.generated.*
+*_pb2.py
+*_pb2_grpc.py

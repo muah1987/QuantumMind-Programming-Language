@@ -1,0 +1,56 @@
+// QuantumMind Core Types - Quantum Type System
+// Fundamental quantum types for the QuantumMind language
+
+// Core quantum bit type with superposition support
+conscious type qubit = quantum_bit {
+    state: superposition<complex>,
+    entanglements: relationship_map,
+    coherence_time: duration,
+    measurement_history: event_log,
+    backend_binding: quantum_backend_ref
+}
+
+// Quantum register - array of qubits
+type qregister[n] = quantum_array {
+    qubits: array<qubit>[n],
+    entanglement_graph: quantum_graph,
+    collective_operations: gate_library,
+    parallel_access: boolean
+}
+
+// Superposition type for multiple states
+type superposition<T> = quantum_state {
+    states: array<T>,
+    amplitudes: array<complex>,
+    collapse_probability: function() -> T,
+    measurement_basis: measurement_operator,
+    decoherence_model: noise_model
+}
+
+// Entangled pair type
+type entangled<T1, T2> = quantum_correlation {
+    first: T1,
+    second: T2,
+    entanglement_strength: float,
+    correlation_type: entanglement_type,
+    shared_quantum_state: quantum_state
+}
+
+// Quantum measurement result
+type quantum_measurement<T> = measurement_result {
+    value: T,
+    probability: float,
+    measurement_time: timestamp,
+    measurement_operator: operator,
+    post_measurement_state: quantum_state
+}
+
+// Quantum gate operation
+type quantum_gate = quantum_operation {
+    name: string,
+    qubits_required: int,
+    unitary_matrix: complex_matrix,
+    parameter_count: int,
+    gate_time: duration,
+    error_rate: float
+}
