@@ -1,0 +1,86 @@
+// QuantumMind Core Types - Resource Management Type System
+// Types for resource allocation, monitoring, and optimization
+
+// Hardware resource specification
+type hardware_resource = physical_resource {
+    resource_type: resource_type_enum,
+    capacity: resource_capacity,
+    availability: availability_status,
+    performance_characteristics: performance_profile,
+    power_consumption: power_metric,
+    thermal_profile: thermal_characteristics,
+    location: resource_location
+}
+
+// Resource pool for grouped resources
+type resource_pool = resource_collection {
+    name: string,
+    resources: array<hardware_resource>,
+    allocation_strategy: allocation_policy,
+    load_balancer: load_balancing_algorithm,
+    health_monitor: health_monitoring_system,
+    scaling_policy: auto_scaling_config
+}
+
+// Resource allocation binding
+type resource_binding = allocation_binding {
+    variable_id: variable_identifier,
+    allocated_resources: array<hardware_resource>,
+    allocation_time: timestamp,
+    expected_duration: duration,
+    priority_level: priority_enum,
+    migration_policy: migration_strategy
+}
+
+// Resource requirements specification
+type resource_requirements = requirement_spec {
+    cpu_cores: int,
+    memory_gb: float,
+    gpu_memory_gb: float,
+    quantum_qubits: int,
+    network_bandwidth_gbps: float,
+    storage_gb: float,
+    latency_requirements: latency_spec,
+    availability_requirements: availability_spec
+}
+
+// Performance metrics for resources
+type performance_metrics = metric_collection {
+    cpu_utilization: percentage,
+    memory_utilization: percentage,
+    gpu_utilization: percentage,
+    quantum_gate_fidelity: float,
+    network_latency: duration,
+    throughput: throughput_metric,
+    energy_efficiency: efficiency_metric
+}
+
+// Resource allocation policy
+type allocation_policy = policy_definition {
+    priority_strategy: priority_algorithm,
+    load_balancing: load_balance_strategy,
+    fault_tolerance: fault_tolerance_config,
+    cost_optimization: cost_optimization_strategy,
+    energy_optimization: energy_strategy,
+    migration_triggers: migration_trigger_config
+}
+
+// Compute device specification
+type compute_device = device_spec {
+    device_type: device_type_enum, // CPU, GPU, QPU, TPU
+    device_id: device_identifier,
+    compute_capability: capability_spec,
+    memory_hierarchy: memory_layout,
+    interconnect: interconnect_spec,
+    vendor: vendor_info
+}
+
+// Network resource specification
+type network_resource = network_spec {
+    bandwidth: bandwidth_spec,
+    latency: latency_profile,
+    topology: network_topology,
+    protocols: protocol_support,
+    qos_capabilities: qos_spec,
+    security_features: security_capabilities
+}

@@ -1,0 +1,84 @@
+// QuantumMind Core Types - Hybrid System Types
+// Types that combine quantum, neural, and classical computing
+
+// Uncertainty type with confidence tracking
+type maybe<T> = uncertain_value {
+    value: T,
+    confidence: probability,
+    uncertainty_source: uncertainty_type,
+    propagation_history: uncertainty_chain,
+    confidence_interval: interval<T>
+}
+
+// Fuzzy set with membership functions
+type fuzzy_set<T> = fuzzy_collection {
+    elements: array<T>,
+    membership_function: function(T) -> float,
+    fuzzy_operations: fuzzy_operator_set,
+    linguistic_variables: linguistic_mapping
+}
+
+// Range type for continuous values
+type range<T> = continuous_range {
+    lower_bound: T,
+    upper_bound: T,
+    distribution: probability_distribution,
+    sampling_strategy: sampling_method
+}
+
+// Hybrid quantum-classical variable
+type hybrid_var<Q, C> = hybrid_variable {
+    quantum_component: Q,
+    classical_component: C,
+    synchronization_policy: sync_policy,
+    consistency_requirements: consistency_spec,
+    migration_capability: migration_support
+}
+
+// Consciousness state for introspective systems
+type consciousness = awareness_state {
+    current_goals: goal_set,
+    emotional_state: emotion_vector,
+    knowledge_gaps: uncertainty_map,
+    metacognitive_state: metacognition_info,
+    self_model: self_representation,
+    introspection_depth: depth_level
+}
+
+// Multi-modal input type
+type multimodal_input = combined_input {
+    text: string,
+    image: image_tensor,
+    audio: audio_tensor,
+    video: video_tensor,
+    sensor_data: sensor_array,
+    metadata: metadata_dict
+}
+
+// Parallel execution context
+type parallel_context = execution_context {
+    thread_pool: thread_pool_spec,
+    resource_allocation: resource_binding,
+    synchronization_primitives: sync_primitive_set,
+    communication_channels: channel_array,
+    fault_tolerance: fault_handling_spec
+}
+
+// Quantum-neural hybrid network
+type quantum_neural_net = hybrid_network {
+    quantum_layers: array<quantum_layer>,
+    classical_layers: array<neural_layer>,
+    interface_layers: array<interface_layer>,
+    training_protocol: hybrid_training_spec,
+    optimization_strategy: hybrid_optimization
+}
+
+// Adaptive variable with self-optimization
+conscious type adaptive_var<T> = self_optimizing_variable {
+    current_value: T,
+    adaptation_history: adaptation_log,
+    optimization_function: optimization_strategy,
+    learning_rate: float,
+    adaptation_triggers: trigger_conditions,
+    performance_metrics: performance_tracker
+}

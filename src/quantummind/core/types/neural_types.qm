@@ -1,0 +1,81 @@
+// QuantumMind Core Types - Neural Network Type System
+// AI-native types for neural network and machine learning operations
+
+// Neural network type with adaptive learning
+conscious type neural_net = adaptive_system {
+    layers: array<layer_spec>,
+    weights: tensor_space,
+    learning_state: optimizer_state,
+    memory_bank: experience_store,
+    architecture: network_architecture,
+    training_mode: boolean,
+    gradient_state: gradient_accumulator
+}
+
+// Multi-dimensional tensor for neural computations
+type tensor<dim> = multi_array {
+    data: array<float>[dim],
+    shape: array<int>,
+    dtype: data_type,
+    device: compute_device,
+    requires_grad: boolean,
+    grad_fn: gradient_function
+}
+
+// Vector embedding for semantic representations
+type embedding<dim> = semantic_vector {
+    dimensions: dim,
+    vector_data: array<float>[dim],
+    semantic_space: vector_space,
+    similarity_function: distance_metric,
+    normalization: normalization_type
+}
+
+// Abstract concept representation
+type concept = abstract_knowledge {
+    semantic_embedding: embedding<512>,
+    relationship_graph: concept_network,
+    confidence_map: uncertainty_field,
+    creation_context: context_info,
+    evolution_history: concept_evolution
+}
+
+// Attention mechanism for transformers
+type attention = attention_mechanism {
+    query_projection: linear_layer,
+    key_projection: linear_layer,
+    value_projection: linear_layer,
+    attention_weights: tensor<2>,
+    head_count: int,
+    dimension: int
+}
+
+// Memory bank for persistent learning
+type memory_bank = persistent_storage {
+    experiences: experience_collection,
+    episodic_memory: episodic_storage,
+    semantic_memory: semantic_storage,
+    working_memory: working_storage,
+    consolidation_policy: memory_policy,
+    retrieval_mechanism: retrieval_function
+}
+
+// Neural layer specification
+type layer_spec = layer_definition {
+    layer_type: layer_type_enum,
+    input_shape: shape_tuple,
+    output_shape: shape_tuple,
+    parameters: parameter_dict,
+    activation_function: activation_type,
+    initialization: init_strategy
+}
+
+// Training experience for learning
+type experience = learning_experience {
+    input_data: tensor<any>,
+    target_output: tensor<any>,
+    context: context_dict,
+    timestamp: timestamp,
+    importance_weight: float,
+    learning_outcome: outcome_metric
+}
